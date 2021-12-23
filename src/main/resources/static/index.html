@@ -1,5 +1,7 @@
 Regarder les logs console ...
 
+<ul id="list"></ul>
+
 <script>
 
 fetch('http://localhost:8080/countries',{
@@ -12,8 +14,22 @@ fetch('http://localhost:8080/countries',{
   return response.json();
 })
 .then(function(data) {
-  console.log(data)
+    for (let index = 0; index < data.length; index++) {
+        const element = data[index];
+        document.getElementById('list').innerHTML += "<li>" +  element.code + "</li>";
+    }
+    console.log(data);
 });
+
+
+
+
+
+
+
+
+
+
 
 fetch('http://localhost:8080/country/10',{
     method: 'PUT',
@@ -26,6 +42,7 @@ fetch('http://localhost:8080/country/10',{
   return response.json();
 })
 .then(function(data) {
+    
   console.log(data)
 });
 
