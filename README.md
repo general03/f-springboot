@@ -17,22 +17,17 @@
 - Mettre en place une validation des champs du Bean (le code doit être sur 2 caractères en majuscule)
 - Retourner un JSON qui contient le message correspondant au type d'erreur
 
-# Veille
-
-- Gestion des dépendances
-- JPA
-- Les verbes HTTP
 
 # Java
 
-- Version gratuite OpenDK, depuis le rachat par Oracle
+- Version gratuite OpenJDK, depuis le rachat par Oracle
 - Version entreprise Jakarta EE, ancienne J2EE
 <img src="images/j2ee.png" />
 - Java Runtime Environnement permet d'avoir les outils nécessaires à l'interprétation du bytecode
 - Java Virtual Machine est l'interpéteur qui lie le langage machine
 - Java Development Kit est une suite de librairie pour construire son application Java
 - Le Java un langage compilé qui génère du bytecode (.class) pour que la JVM puisse interprété le langage machine
-<img src="compilateur/j2ee.png" />
+<img src="images/compilateur.png" />
 
 # Launch
 
