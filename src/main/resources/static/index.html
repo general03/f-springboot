@@ -1,0 +1,33 @@
+Regarder les logs console ...
+
+<script>
+
+fetch('http://localhost:8080/countries',{
+    method: 'GET',
+    headers: {
+        'Content-type': 'application/json;' 
+    }
+})
+.then(function(response) {
+  return response.json();
+})
+.then(function(data) {
+  console.log(data)
+});
+
+fetch('http://localhost:8080/country/10',{
+    method: 'PUT',
+    headers: {
+        'Content-type': 'application/json;' 
+    },
+    body: JSON.stringify({code: "ER"})
+})
+.then(function(response) {
+  return response.json();
+})
+.then(function(data) {
+  console.log(data)
+});
+
+
+</script>

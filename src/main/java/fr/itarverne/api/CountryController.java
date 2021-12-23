@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import fr.itarverne.api.CountryRepository;
@@ -36,6 +37,13 @@ class CountryController {
 
   CountryController(CountryRepository repository) {
     this.repository = repository;
+  }
+
+  @RequestMapping("/")
+  public ModelAndView index() {
+    ModelAndView modelAndView = new ModelAndView();
+    modelAndView.setViewName("index.html");
+    return modelAndView;
   }
 
   @GetMapping("/countries")
